@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0rem;
+  a.logo-icon {
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+    margin-right: 0rem;
+  }
+}

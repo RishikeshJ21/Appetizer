@@ -1,0 +1,38 @@
+import React from 'react';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import './speech-to-text.scss';
+
+export const transcript ="./SearchBox.jsx";
+function speech() {
+  
+ 
+  const commands = [
+    {
+      command: 'reset',
+      callback: ({ resetTranscript }) => 
+        resetTranscript()
+    },
+    {
+      command: 'clear',
+      callback: ({ resetTranscript }) => resetTranscript()
+    }
+  ]
+
+  SpeechRecognition.startListening({ continuous: true, language:'en-IN' })
+  const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition({ commands })
+
+  
+  if (!browserSupportsSpeechRecognition) {
+    return null
+  }
+
+  return (
+    <div className='container'>
+      <br/>
+      <div id='cont'>
+        {transcript}
+      </div>
+    </div>
+  )
+}
+export default speech
