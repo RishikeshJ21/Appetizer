@@ -1,0 +1,21 @@
+{
+    "sendgrid": {
+    "apiKey": "<Your sendGrid API Key>",
+    "from": "Customer Service <Your email>",
+    "fromName": "Evershop",
+    "events": {
+      "order_placed": {
+        "enabled": true,
+        "templateId": "d-4c5e08f0c69d45f6994b93372f68d4"
+      },
+      "reset_password": {
+        "enabled": true,
+        "templateId": "d-4f34caba1e184273c7f3d5568f3c21"
+      },
+      "customer_registered": {
+        "enabled": true,
+        "templateId": "d-98b1cdc4896c4e7595e04dcf4a4560"
+      }
+    }
+  }
+} 

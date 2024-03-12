@@ -1,0 +1,11 @@
+.auto-scroller-container {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    
+    .banner-item {
+      flex-shrink: 0;
+      width: 100%;
+    }
+  }
+  
