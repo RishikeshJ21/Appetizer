@@ -1,0 +1,65 @@
+{
+    "shop": {
+        "currency": "INR",
+        "language": "en",
+        "weightUnit": "kg",
+        "timezone": "UTC"
+    },
+    
+    "google_login": {
+
+        "success_redirect_url": "https://appetizer.live/",
+        "failure_redirect_url": "https://appetizer.live/account/login"
+      },
+    "system": {
+        "theme": "../theme/food",
+        "extensions": [
+            {
+                "name": "AllProductsView",
+                "resolve": "extensions/AllProductsView",
+                "enabled": true,
+                "priority": 1
+            },
+            {
+              "name": "google_login",
+              "resolve": "node_modules/@evershop/google_login",
+              "enabled": true,
+              "priority": 10
+            },
+            
+            {
+                "name": "product_review",
+                "resolve": "node_modules/@evershop/product_review",
+                "enabled": true,
+                "priority": 10
+            },
+            {
+                "name": "razorpay",
+                "resolve": "node_modules/evershop-razorpay/razorpay",
+                "enabled": true
+            }
+
+          ]
+
+
+    },
+    "sendgrid": {
+        "apiKey": "",
+        "from": "",
+        "events": {
+            "order_placed": {
+                "enabled": true,
+                "templateId": ""
+            },
+            "reset_password": {
+                "enabled": true,
+                "templateId": ""
+            },
+            "customer_registered": {
+                "enabled": true,
+                "templateId": ""
+            }
+        }
+    }
+    
+}
