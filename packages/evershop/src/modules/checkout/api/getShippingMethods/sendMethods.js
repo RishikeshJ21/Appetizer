@@ -107,7 +107,7 @@ module.exports = async (request, response, delegate, next) => {
       methods.map(async (method) => {
         if (method.calculate_api) {
           // This API is internal. It must be public
-          let api = 'http://localhost:3000';
+          let api = 'https://appetizer.live';
           try {
             api += buildUrl(method.calculate_api, {
               cart_id,

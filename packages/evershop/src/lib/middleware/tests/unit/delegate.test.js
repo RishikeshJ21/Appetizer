@@ -13,7 +13,7 @@ describe('buildMiddlewareFunction', () => {
 
   it('Middleware function return desired value', async () => {
     // Visit a url
-    await axios.get(`http://localhost:${port}/delegateTest`, {
+    await axios.get(`https://appetizer.live:${port}/delegateTest`, {
       validateStatus(status) {
         return status >= 200 && status < 600;
       }

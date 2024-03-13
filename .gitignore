@@ -1,5 +1,4 @@
-
-Dockerfile
-docker-compose.yml
-nodemon.json
+.evershop
+.log
 node_modules
+.env

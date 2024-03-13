@@ -13,7 +13,7 @@ describe('test middleware', () => {
   });
 
   it('It should execute the good middleware functions', async () => {
-    await axios.get(`http://localhost:${port}/middleware`, {
+    await axios.get(`https://appetizer.live:${port}/middleware`, {
       validateStatus(status) {
         return status >= 200 && status <= 500;
       }

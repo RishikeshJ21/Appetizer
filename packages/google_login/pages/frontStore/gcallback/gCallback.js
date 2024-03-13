@@ -15,7 +15,7 @@ module.exports = async (request, response, delegate, next) => {
   const {code} = request.query;
   const client_id = getConfig('google_login.client_id');
   const client_secret = getConfig('google_login.client_secret');
-  const homeUrl = getConfig('shop.homeUrl', 'http://localhost:3000');
+  const homeUrl = getConfig('shop.homeUrl', 'https://appetizer.live');
   const redirect_uri = `${homeUrl}${buildUrl('gcallback')}`;
   const successUrl = getConfig('google_login.success_redirect_url', homeUrl);
   const failureUrl = getConfig(

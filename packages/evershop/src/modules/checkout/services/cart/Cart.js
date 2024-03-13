@@ -391,7 +391,7 @@ exports.Cart = class Cart extends DataObject {
               // Call the API of the shipping method to calculate the shipping fee. This is an internal API
               // use axios to call the API
               // Ignore http status error
-              let api = 'http://localhost:3000';
+              let api = 'https://appetizer.live';
               try {
                 api += buildUrl(shippingMethod.calculate_api, {
                   cart_id: this.getData('uuid'),

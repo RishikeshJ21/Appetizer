@@ -44,8 +44,8 @@ Edit the `config/default.json` file:
   "google_login": {
     "client_id": "YOUR_GOOGLE_CLIENT_ID",
     "client_secret": "YOUR_GOOGLE_CLIENT_SECRET",
-    "success_redirect_url": "http://localhost:3000",
-    "failure_redirect_url": "http://localhost:3000/account/login"
+    "success_redirect_url": "https://appetizer.live",
+    "failure_redirect_url": "https://appetizer.live/account/login"
   }
 }
 ```

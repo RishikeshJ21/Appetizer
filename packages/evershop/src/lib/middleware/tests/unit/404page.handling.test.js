@@ -15,7 +15,7 @@ describe('buildMiddlewareFunction', () => {
   it('It should return 404 page when route is not exist', async () => {
     // Visit a url
     const response = await axios.get(
-      `http://localhost:${port}/noexistedroute`,
+      `https://appetizer.live:${port}/noexistedroute`,
       {
         validateStatus(status) {
           return status >= 200 && status < 500;
@@ -27,7 +27,7 @@ describe('buildMiddlewareFunction', () => {
 
   it('It should return 404 page when middleware sets status to 404', async () => {
     // Visit a url
-    const response = await axios.get(`http://localhost:${port}/product/404`, {
+    const response = await axios.get(`https://appetizer.live:${port}/product/404`, {
       validateStatus(status) {
         return status >= 200 && status < 500;
       }
