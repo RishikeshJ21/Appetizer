@@ -14,7 +14,7 @@ describe('test API middleware', () => {
 
   it('It should execute the valid middleware functions', async () => {
     try {
-      await axios.post(`https://appetizer.live:${port}/api/as`, {
+      await axios.post(`appetizer.live:${port}/api/as`, {
         validateStatus(status) {
           return status >= 200 && status < 600;
         }

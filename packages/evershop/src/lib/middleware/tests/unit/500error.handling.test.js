@@ -14,7 +14,7 @@ describe('buildMiddlewareFunction', () => {
   it('It should return 500 error when a error occurred', async () => {
     // Visit a url
     const response = await axios.get(
-      `https://appetizer.live:${port}/errorHandlerTest`,
+      `appetizer.live:${port}/errorHandlerTest`,
       {
         validateStatus (status) {
           return status >= 200 && status < 600;
