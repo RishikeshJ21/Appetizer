@@ -8,7 +8,7 @@ const port = normalizePort();
  */
 module.exports = function onListening() {
   success(
-    boxen(`Your website is running at "https://appetizer.live:${port}"`, {
+    boxen(`Your website is running at "appetizer.live:${port}"`, {
       title: 'EverShop',
       titleAlignment: 'center',
       padding: 1,
