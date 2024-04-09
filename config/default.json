@@ -8,8 +8,8 @@
     },
     
     "google_login": {
-        "client_id": "828537029976-c59t3rnu3mn5fvqccekal7s2lho1e3rj.apps.googleusercontent.com",
-        "client_secret": "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",
+        "client_id": "729441655682-a9g0rrc31pn8b1lk29mbd3upkvko22vs.apps.googleusercontent.com",
+        "client_secret": "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",
         "success_redirect_url": "https://appetizer.live",
         "failure_redirect_url": "https://appetizer.live/account/login"
       },
