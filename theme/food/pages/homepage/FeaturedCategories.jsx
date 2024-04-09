@@ -14,7 +14,7 @@ function FeaturedCategories() {
 
           <a
             className="absolute underline top-[20px] left-[20px] bg-white px-2"
-            href="#">
+            href="/Chinese">
             <p>Chinese</p>
           </a>
         </div>
@@ -22,7 +22,7 @@ function FeaturedCategories() {
           <img src="/women-banner.jpg" alt="Shop women" />
           <a
             className="absolute underline top-[20px] left-[20px] bg-white px-2"
-            href="#">
+            href="/North-Indian">
             <p>North Indian</p>
           </a>
           <div style={{padding:"10px"}}><p> </p></div>
@@ -33,7 +33,7 @@ function FeaturedCategories() {
           <img src="/burger.jpg" alt="Shop kids" />
           <a
             className="absolute underline top-[20px] left-[20px] bg-white px-2"
-            href="#">
+            href="/Fast-Food">
             <p>Fast Food</p>
           </a>
         
@@ -42,7 +42,7 @@ function FeaturedCategories() {
           <img src="/briyani.jpg" alt="Shop Briyani" />
           <a
             className="absolute underline top-[20px] left-[20px] bg-white px-2"
-            href="#">
+            href="/Briyani">
             <p>Briyani</p>
           </a>
         </div>
