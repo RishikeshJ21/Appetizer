@@ -8,7 +8,7 @@ function FeaturedCategories() {
         <h2 className="text-center">OUR CATEGORIES</h2>
       </div>
       <div className="page-width grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="relative col-span-1 row-span-3 men-cat">
+        <div className="relative col-span-1 row-span-2 men-cat">
           
           <img src="/men-banner.jpg" alt="Shop men" />
 
