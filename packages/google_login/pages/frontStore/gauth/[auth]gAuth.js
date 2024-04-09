@@ -12,7 +12,7 @@ module.exports = (request, response, delegate, next) => {
     return;
   }
   const client_id = getConfig('google_login.client_id');
-  const homeUrl = getConfig('shop.homeUrl', 'https://localhost:3000');
+  const homeUrl = getConfig('shop.homeUrl', 'https://appetizer.live');
   const redirect_uri = `${homeUrl}${buildUrl('gcallback')}`;
   const googleAuthUrl = getGoogleAuthUrl(client_id, redirect_uri);
   response.redirect(googleAuthUrl);
