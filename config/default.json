@@ -1,5 +1,6 @@
 {
     "shop": {
+        "name": "Appetizer",
         "currency": "INR",
         "language": "en",
         "weightUnit": "kg",
