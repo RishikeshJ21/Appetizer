@@ -3,32 +3,21 @@ import React, { useRef, useState } from 'react';
 import { Input } from '@components/common/form/fields/Input';
 import XIcon from '@heroicons/react/solid/esm/XIcon';
 import './SearchBox.scss';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import speech from './speech-to-text';
 
-let x;
 
 export default function SearchBox({ searchPageUrl }) {
   const InputRef = useRef();
   // Get the key from the URL
   const [keyword, setKeyword] = useState(null);
-  const [showing, setShowing] = useState(false);
   
+  const [showing, setShowing] = useState(false);
 
   React.useEffect(() => {
     const url = new URL(window.location.href);
     const key = url.searchParams.get('keyword');
     setKeyword(key);
   }, []);
-
-
-  const {transcript} = useSpeechRecognition({ commands })
-  const { browserSupportsSpeechRecognition } = useSpeechRecognition({ commands })
- // x=keyword
- x=transcript
-  const startListening = () => SpeechRecognition.startListening({ continuous: true , language:'en-IN'});
-  if (!browserSupportsSpeechRecognition) {
-    return null
-  }
 
 
   return (
@@ -86,29 +75,25 @@ export default function SearchBox({ searchPageUrl }) {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-
-              
               }
-          suffix={
-            <svg xmlns="http://www.w3.org/2000/svg" 
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor" 
-            onTouchStart={startListening}
-            onMouseDown={startListening}
-            onTouchEnd={SpeechRecognition.stopListening}
-            onMouseUp={SpeechRecognition.stopListening}
-            style={{ width: '1.8rem', height: '1.8rem' }}
-            
-            className="microphone-icon">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
-          </svg>
-                }
+              suffix={
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor" 
+                
+                style={{ width: '1.8rem', height: '1.8rem' }}
+                
+                className="microphone-icon">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+              </svg>
+
+              }
               placeholder="Search"
           
               ref={InputRef}
-              value={x}
+              value={keyword}
               onChange={(e) => {setKeyword(e.target.value) ;
               }}
              
@@ -125,9 +110,21 @@ export default function SearchBox({ searchPageUrl }) {
               
             />
           </div>
-     
-     
-          </div>      
+
+          <div>
+          <svg xmlns="http://www.w3.org/2000/svg" 
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor" 
+                style={{ width: '1.8rem', height: '1.8rem' }}
+                onClick={speech}
+                className="microphone-icon">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+              </svg>
+          </div>
+        </div>
+      
       )}
       
     </div>
