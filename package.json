@@ -1,7 +1,7 @@
 {
-  "name": "evershop",
+  "name": "Appetizer",
   "version": "1.0.0-beta",
-  "description": "A shopping cart platform with Express, React and Postgres",
+  "description": "Food Ordering Web Application for Campuses",
   "files": [
     "bin",
     "src",
